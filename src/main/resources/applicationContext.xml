@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   --> <bean id="car" class="example.Car">
+        <constructor-arg value="Toyota"/>
+        <constructor-arg value="Camry"/>
+    </bean>
+
+    <bean  id="pet" class="example.Pet">
+        <constructor-arg value="Busya"/>
+        <constructor-arg value="Cat"/>
+    </bean>
+    <bean  id="employee" class="example.Employee">
+        <constructor-arg value="Ben Stoun"/>
+        <constructor-arg value="30"/>
+        <constructor-arg ref="pet"/>
+        <constructor-arg ref="car"/>
+    </bean>
+
+</beans>
